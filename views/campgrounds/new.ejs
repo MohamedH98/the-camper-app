@@ -3,7 +3,13 @@
 <div class="row">
   <h1 class="text-center">New Campground</h1>
   <div class="col-6 offset-3">
-    <form action="/campgrounds" method="POST" novalidate class="validatedform">
+    <form
+      action="/campgrounds"
+      method="POST"
+      novalidate
+      class="validatedform"
+      enctype="multipart/form-data"
+    >
       <div clas="mb-3">
         <label class="form-label" for="title">Title</label>
         <input
@@ -52,17 +58,18 @@
           name="campground[description]"
           required
         ></textarea>
-        <div class="valid-feedback">Looks good</div>
+        <div class="valid-feedback">Looks good!</div>
       </div>
-      <div>
-        <label class="form-label" for="image">Image</label>
+      <div class="input-group my-3">
         <input
+          type="file"
           class="form-control"
-          type="text"
+          name="image"
           id="image"
-          name="campground[image]"
+          multiple
           required
         />
+        <label class="input-group-text" for="image">Upload</label>
         <div class="valid-feedback">Looks good</div>
       </div>
       <div class="my-3">
