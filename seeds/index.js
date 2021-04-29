@@ -19,7 +19,7 @@ db.once("open", () => {
 const sample = (array) => array[Math.floor(Math.random() * array.length)];
 const seedDB = async () => {
   await Campground.deleteMany({});
-  for (let i = 0; i < 50; i++) {
+  for (let i = 0; i < 300; i++) {
     const rand1000 = Math.floor(Math.random() * 1000) + 1;
     const price = Math.floor(Math.random() * 20) + 20;
     const camp = new Campground({
@@ -36,7 +36,10 @@ const seedDB = async () => {
       description:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium molestiae repellendus modi harum doloremque repellat esse accusamus enim porro et dolor neque, necessitatibus ullam, cumque error eius facilis, sint laboriosam.",
       price,
-      geometry: { type: "Point", coordinates: [-133.1331, 47.0202] },
+      geometry: {
+        type: "Point",
+        coordinates: [cities[rand1000].longitude, cities[rand1000].latitude],
+      },
     });
     await camp.save();
   }
