@@ -4,7 +4,7 @@ const cities = require("./cities");
 const { places, descriptors } = require("./seedHelpers");
 const Campground = require("./../models/campground");
 
-mongoose.connect("mongodb://localhost:27017/yelp-camp", {
+mongoose.connect(DBURL, {
   useNewUrlParser: true,
   useCreateIndex: true,
   useUnifiedTopology: true,
@@ -29,7 +29,7 @@ const seedDB = async () => {
       images: [
         {
           url:
-            "https://res.cloudinary.com/dji3ur3pk/image/upload/v1619535628/YelpCamp/v5jvrpxtaobznzcdwdtb.jpg",
+            "https://res.cloudinary.com/dji3ur3pk/image/upload/v1619719737/YelpCamp/rpe4ter5jp1vsqyt9nxj.jpg",
           filename: "YelpCamp/v5jvrpxtaobznzcdwdtb",
         },
       ],
