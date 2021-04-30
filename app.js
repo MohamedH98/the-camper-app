@@ -17,7 +17,7 @@ const usersRoutes = require("./routes/users");
 const User = require("./models/user");
 const mongoSanitize = require("express-mongo-sanitize");
 const helmet = require("helmet");
-const DBURL = process.env.DBURL || "mongodb://localhost:27017/yelp-camp";
+const DBURL = process.env.DBURL;
 const { SECRET } = process.env;
 const MongoDBStore = require("connect-mongo");
 mongoose.connect(DBURL, {
