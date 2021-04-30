@@ -139,7 +139,7 @@ app.use("/campgrounds", campgroundsRoutes);
 app.use("/campgrounds/:id/reviews", reviewsRoutes);
 app.use("/", usersRoutes);
 
-app.get("/", (req, res, next) => {
+app.get("/", (req, res) => {
   res.render("home");
 });
 
@@ -148,7 +148,7 @@ app.all("*", (req, res, next) => {
 });
 
 app.use((err, req, res, next) => {
-  const { statusCode = 500, message } = err;
+  const { statusCode = 500 } = err;
   if (!err.message) err.message = "Something went wrong";
   res.status(statusCode).render("error", { err });
 });
