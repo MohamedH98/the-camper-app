@@ -77,24 +77,26 @@ app.use(flash());
 app.use(helmet());
 
 const scriptSrcUrls = [
-  "https://stackpath.bootstrapcdn.com/",
+  "https://stackpath.bootstrapcdn.com",
   "https://api.tiles.mapbox.com",
   "https://api.mapbox.com",
-  "https://kit.fontawesome.com/",
-  "https://cdnjs.cloudflare.com/",
-  "https://cdn.jsdelivr.net/",
+  "https://kit.fontawesome.com",
+  "https://cdnjs.cloudflare.com",
+  "https://cdn.jsdelivr.net",
 ];
+//This is the array that needs added to
 const styleSrcUrls = [
-  "https://kit-free.fontawesome.com/",
-  "https://stackpath.bootstrapcdn.com/",
+  "https://kit-free.fontawesome.com",
   "https://api.mapbox.com",
   "https://api.tiles.mapbox.com",
-  "https://fonts.googleapis.com/",
-  "https://use.fontawesome.com/",
+  "https://fonts.googleapis.com",
+  "https://use.fontawesome.com",
+  "https://cdn.jsdelivr.net",
 ];
 const connectSrcUrls = [
   "https://api.mapbox.com",
   "https://*.tiles.mapbox.com",
+  "https://events.mapbox.com",
   "https://events.mapbox.com",
 ];
 const fontSrcUrls = [];
@@ -113,7 +115,7 @@ app.use(
         "blob:",
         "data:",
         "https://res.cloudinary.com/dji3ur3pk/",
-        "https://images.unsplash.com",
+        "https://images.unsplash.com/",
       ],
       fontSrc: ["'self'", ...fontSrcUrls],
     },
