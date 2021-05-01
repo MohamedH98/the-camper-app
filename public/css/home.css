@@ -9,3 +9,11 @@ body {
 .cover-container {
   max-width: 50vw;
 }
+.lead {
+  font-size: 1.5rem;
+}
+.footer {
+  width: 100%;
+  align-self: end;
+  justify-self: end;
+}
