@@ -12,7 +12,11 @@
   <div class="row">
     <div class="col-md-4">
       <% if (campground.images.length) { %>
-      <img class="img-thumbnail" alt="" src="<%= campground.images[0].url %>" />
+      <img
+        class="img-thumbnail img-responsive"
+        alt=""
+        src="<%= campground.images[0].url %>"
+      />
       <% } else { %>
       <img
         class="img-thumbnail"
