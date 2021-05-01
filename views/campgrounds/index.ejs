@@ -7,7 +7,7 @@
   <a href="/campgrounds/new">Create new campground</a>
 </div>
 
-<% campgrounds.forEach((campground) => { %>
+<% campgrounds.slice().reverse().forEach((campground) => { %>
 <div class="card mb-4 shadow">
   <div class="row">
     <div class="col-md-4">
